@@ -41,24 +41,24 @@ function App() {
       </nav>
 
       <section className="main" style={{ backgroundImage: `url(${basketballImage})` }}>
-        <div className="container-fluid py-5">
-          <div className="row py-4">
-            <div className="col-lg-7">
-              <div className="d-flex flex-column justify-content-end align-items-start h-800">
-                <h1 className="pt-5 text-left main-title">AUTHENTICITY IN THE BASKETBALL COURT</h1>
-                <a href="#" className="btn-learn-more mt-3 ms-3">S'inscrire</a>
-              </div>
+      <div className="container-fluid py-5">
+        <div className="row py-4">
+          <div className="col-lg-7">
+            <div className="text-container">
+              <h1 className="pt-5 text-left main-title">AUTHENTICITY IN THE BASKETBALL COURT</h1>
+              <a href="#" className="btn-learn-more mt-3 ms-3">S'inscrire</a>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
       <section className="new">
         <div className="container">
-          <div className="row pt-5">
-            <div className="col-lg-12 text-center">
-              <h5 style={{ color: 'orange' }}>latest game</h5>
-              <h1>LATEST MATCH RESULTS</h1>
+        <div className="row pt-5">
+            <div className="col-lg-12 text-center last-match-container">
+              <h5 className="last-match-title">Dernier match jouée</h5>
+              <h1 className="results-title">RESULTATS</h1>
             </div>
             <div className="col-lg-4 text-center">
               <img src={teamOneImage} className="equipe1" alt="Team Basketone" />
@@ -85,7 +85,7 @@ function App() {
                 <img src={ballImage} className="icon" alt="ball" />
                 <div className="d-flex flex-column">
                   <span className="icon-number">24</span>
-                  <span className="icon-text" style={{ color: 'orange' }}>Basketball</span>
+                  <span className="icon-text" style={{ color: 'orange' }}>évenement</span>
                 </div>
               </div>
             </div>
@@ -94,7 +94,7 @@ function App() {
                 <img src={hoopImage} className="icon" alt="panier" />
                 <div className="d-flex flex-column">
                   <span className="icon-number">89</span>
-                  <span className="icon-text" style={{ color: 'orange' }}>Basket Hoop</span>
+                  <span className="icon-text" style={{ color: 'orange' }}>match</span>
                 </div>
               </div>
             </div>
@@ -103,7 +103,7 @@ function App() {
                 <img src={jerseyImage} className="icon" alt="maillot" />
                 <div className="d-flex flex-column">
                   <span className="icon-number">30</span>
-                  <span className="icon-text" style={{ color: 'orange' }}>Jersey</span>
+                  <span className="icon-text" style={{ color: 'orange' }}>équipe</span>
                 </div>
               </div>
             </div>
@@ -112,7 +112,7 @@ function App() {
                 <img src={trophyImage} className="icon" alt="trophee" />
                 <div className="d-flex flex-column">
                   <span className="icon-number">230</span>
-                  <span className="icon-text" style={{ color: 'orange' }}>Trophy</span>
+                  <span className="icon-text" style={{ color: 'orange' }}>Trophé</span>
                 </div>
               </div>
             </div>
@@ -121,47 +121,33 @@ function App() {
       </section>
 
       <section className="schedule py-5">
-        <div className="container-fluid text-white ">
-          <div className="row align-items-center">
-            <div className="col-lg-6 order-lg-2 mb-4 mb-lg-0">
-              <div className="card">
-                <div className="card-body">
-                  <h3 className="card-title text-center mb-4 mb-lg-0">Inscription à une séance de basket</h3>
-                  <form>
-                    <div className="mb-3">
-                      <label htmlFor="firstName" className="form-label">Prénom</label>
-                      <input type="text" className="form-control" id="firstName" placeholder="Entrez votre prénom" required />
-                    </div>
-                    <div className="mb-3">
-                      <label htmlFor="lastName" className="form-label">Nom</label>
-                      <input type="text" className="form-control" id="lastName" placeholder="Entrez votre nom" required />
-                    </div>
-                    <div className="mb-3">
-                      <label htmlFor="email" className="form-label">Email</label>
-                      <input type="email" className="form-control" id="email" placeholder="Entrez votre email" required />
-                    </div>
-                    <div className="mb-3">
-                      <label htmlFor="phone" className="form-label">Numéro de téléphone</label>
-                      <input type="tel" className="form-control" id="phone" placeholder="Entrez votre numéro de téléphone" required />
-                    </div>
-                    <div className="mb-3">
-                      <label htmlFor="message" className="form-label">Message (optionnel)</label>
-                      <textarea className="form-control" id="message" rows="4" placeholder="Entrez votre message"></textarea>
-                    </div>
-                    <button type="submit" className="btn btn-primary">Soumettre</button>
-                  </form>
-                </div>
+      <div className="container-fluid text-white">
+        <div className="row align-items-center">
+          <div className="col-lg-6 order-lg-1 title-container">
+            <h6 className="highlight-text">viens évoluer a nos coté</h6>
+            <h1 className="title-text">REJOINS LA TEAM ET INSCRIT-TOI A T'AS PREMIERE SEANCE</h1>
+          </div>
+          <div className="col-lg-6 order-lg-2 mb-4 mb-lg-0 form-container">
+            <div className="card">
+              <div className="card-body">
+                <form>
+                  <div className="form-group">
+                    <input type="text" className="form-control" placeholder="First Name" />
+                    <input type="text" className="form-control" placeholder="Last Name" />
+                  </div>
+                  <div className="form-group">
+                    <input type="email" className="form-control" placeholder="E-mail" />
+                    <input type="text" className="form-control" placeholder="Phone" />
+                  </div>
+                  <textarea rows="5" placeholder="Message" className="form-control"></textarea>
+                  <a href="#" className="btn-learn-more send-btn">Envoyer</a>
+                </form>
               </div>
-            </div>
-            <div className="col-lg-6 order-lg-1">
-              <h6 style={{ color: 'orange' }}>the old fashioned rules</h6>
-              <h1 className="font-weight-bold py-3 text-left">BASKETBALL RULES ARE STUNTING THE MODERN GAME</h1>
-              <a href="#" className="btn-learn-more">Planning</a>
             </div>
           </div>
         </div>
-      </section>
-
+      </div>
+    </section>
       <section className="success-story">
   <div className="container-fluid">
     <div className="row">
@@ -197,16 +183,10 @@ function App() {
   </div>
   <div class="contact-body">
     <div class="contact-form">
-      <div class="form-group">
-        <input type="text" class="form-control" placeholder="First Name"/>
-        <input type="text" class="form-control" placeholder="Last Name"/>
-      </div>
-      <div class="form-group">
-        <input type="email" class="form-control" placeholder="E-mail"/>
-        <input type="text" class="form-control" placeholder="Phone"/>
-      </div>
-      <textarea rows="5" placeholder="Message" class="form-control"></textarea>
-      <a href="#" class="btn-learn-more send-btn">Envoyer</a>
+    <iframe
+  style={{ border: 0, borderRadius: 15 }}
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5252.217615976449!2d2.3763265759603645!3d48.837063202207865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e6723e74a2b8dd%3A0x8f0582c6046a888f!2s210%20Quai%20de%20Bercy%2C%2075012%20Paris!5e0!3m2!1sfr!2sfr!4v1720774242110!5m2!1sfr!2sfr" width="600" height="450"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+</iframe> 
     </div>
     <div class="contact-info">
       <div>
@@ -231,6 +211,7 @@ function App() {
       </div>
     </div>
   </div>
+
   <div class="contact-footer">
     <div class="social-links">
       <a href="#" class="fab fa-facebook-f"></a>

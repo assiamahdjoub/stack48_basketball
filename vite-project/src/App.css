@@ -48,6 +48,12 @@
   text-align: left;
   margin-left: 5px;
 }
+.container-fluid {
+  height: 100%;
+}
+.h-800 {
+  height: 800px;
+}
 
 .main .btn-learn-more {
   display: inline-block;
@@ -56,6 +62,7 @@
 .main-title{
   font-size: 3.5rem;
   line-height: 1;
+  margin-bottom: 40px;
 }
 
 
@@ -64,6 +71,7 @@
   font-weight: 700;
   font-family: "DM Serif Display", serif;
   color: aliceblue;
+
 }
 
 .btn1 {
@@ -82,6 +90,7 @@
   align-items: center;
   justify-content: flex-start;
 }
+
 
 /* New section */
 .new {
@@ -136,7 +145,7 @@
 
 /* Schedule section */
 .schedule {
-  background: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url('/images/image_3.jpg') no-repeat center center;
+  background: linear-gradient(rgba(0, 0, 0, 0.041),rgba(0, 0, 0, 0.041)), url('/images/image_3.jpg') no-repeat center center;
   background-size: cover;
   height: 80vh;
   width: 100%;
@@ -152,9 +161,9 @@
 }
 
 .icon {
-  max-width: 100px; /* Ajustez cette valeur selon vos besoins */
-  height: auto; /* Conserve le ratio d'aspect de l'image */
-  margin-bottom: 20px; /* Espacement entre l'icône et le nombre */
+  max-width: 100px;
+  height: auto; 
+  margin-bottom: 20px; 
 }
 
 .icon-number {
@@ -166,65 +175,15 @@
 
 .icon-text {
   font-size: 1rem;
-  margin-top: 20px; /* Espace entre le nombre et le texte */
+  margin-top: 20px;
 }
-
 .icon-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 20px; /* Ajout de padding pour donner de l'espace autour de chaque icône */
-}
-
-/* More section */
-.more {
-  text-align: left;
-  padding-left: 20px;
-  margin-top: 10%;
-}
-
-/* Button styles */
-.btn2 {
-  height: 45px;
-  width: 200px;
-  border: none;
-  outline: none;
-  background-color: rgb(228, 96, 44);
-  color: rgb(255, 255, 255);
-  font-weight: 700;
-  border-radius: 30px;
-  margin-top: 10px;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-}
-
-/* News section */
-.news {
-  background-color: black;
-  color: white;
-}
-
-.news input {
-  height: 45px;
-  width: 55%;
-  border: 2px solid white;
-  outline: none;
-  background: black;
-  color: white;
-  margin-top: 20px;
-  font-weight: 600;
-}
-
-.news::placeholder {
-  color: white;
-}
-
-.news p {
-  margin: 0;
+  padding: 20px; 
 }
 
 /* Footer */
@@ -239,6 +198,50 @@
   color: #fff;
 }
 
+.last-match-container {
+  margin-bottom: 40px; 
+}
+
+.last-match-title {
+  color: orange;
+  margin-bottom: 10px; 
+}
+
+.results-title {
+  font-size: 2.5rem; 
+  font-weight: bold;
+  color: #000000; 
+}
+
+
+.highlight-text {
+  color: orange;
+  margin-left: 40px;
+}
+
+.title-text {
+  font-weight: bold;
+  text-align: left;
+  margin-left: 40px;
+
+}
+.title-container {
+  margin-bottom: 40px; /* Ajustez cette valeur pour déplacer les titres vers le bas */
+}
+.title-container {
+  margin-bottom: 140px; /* Ajustez cette valeur pour déplacer les titres vers le bas */
+}
+/* Optionnel : Classes Bootstrap pour les col- et order- */
+.col-lg-6 {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+.order-lg-1 {
+  order: 1;
+}
+
+
 /* Success story section */
 .success-story {
   padding: 50px 0;
@@ -247,7 +250,7 @@
 .success-story-title {
   color: orange;
   font-weight: bold;
-  margin-right: 20px;
+  margin-left: 40px;
   margin-bottom: 30px;
   margin-top: 15px;
 }
@@ -255,8 +258,9 @@
 .success-story-text {
   font-size: 16px;
   line-height: 1.6;
-  margin-right: 20px;
+  margin-left: 40px;
   text-align: justify;
+  margin-right: 90px;
 }
 
 .success-images .image-container {
@@ -298,8 +302,9 @@
   border-radius: 5px;
   text-transform: uppercase;
   font-weight: bold;
-  margin-top: 20px;
+  margin-top: 10px;
   text-decoration: none;
+  margin-left: 40px;
 }
 /* Main section */
 .main {
@@ -327,14 +332,20 @@
 }
 
 .card {
-  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+  background-color: rgba(0, 0, 0, 0.321); /* Semi-transparent background */
   color: white;
   border: none;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Light shadow */
+  box-shadow: 0 0 20px rgb(0, 0, 0); /* Light shadow */
+
 }
 
 .card-body {
   padding: 2rem; 
+  margin-top: -130px;
+  margin-right: 55%;
+  position: absolute; /* Positionnement absolu */
+  right: -500px; /* valeur pour le décalage horizontal */
+  width: 40%; /* pour la largeur de la carte */
 }
 
 .card-title {
@@ -349,6 +360,8 @@
   background-color: rgba(255, 255, 255, 0.1);
   border: 1px solid #ced4da; 
   color: white;
+  padding: 10px;
+  border-radius: 2px;
 }
 
 .form-control::placeholder {
@@ -363,10 +376,6 @@
 .btn-primary:hover {
   background-color: black; 
   border-color: black; 
-}
-
-body {
-  font-family: 'Poppins', sans-serif;
 }
 
 .contact-section {
@@ -488,7 +497,8 @@ textarea.form-control {
   border: 1px solid #444;
   margin-bottom: 10px;
   box-sizing: border-box; /* Inclure le padding et la bordure dans la largeur totale */
-  margin-bottom: 0px ; /* Ajouter de l'espace en bas du textarea */
+  margin-bottom: 10px ; /* Ajouter de l'espace en bas du textarea */
+  height: 100px;
 }
 
 .form-control {
@@ -496,18 +506,14 @@ textarea.form-control {
   border-radius: 2px;
 }
 
-.contact-info {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  width: 50%;
-  text-align: center;
-  background-color: #000;
-  color: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  margin-bottom: 100px;
-  margin-right: 10px;
+
+.contact-form iframe {
+  width: 100%;
+  height: 500px;
+  border: 0;
+  border-radius:5px;
+  filter: invert(100%);
+  margin: 40px 0; /* Décale la carte du bord */
 }
 
 .contact-info div {
